@@ -22,8 +22,8 @@ export function PricingSection() {
             <CardHeader>
               <CardTitle className="text-xl">Básico</CardTitle>
               <div className="flex items-baseline gap-1">
-                <span className="text-3xl font-bold">R$99</span>
-                <span className="text-muted-foreground">/mês</span>
+                <span className="text-3xl font-bold">999</span>
+                <span className="text-muted-foreground">Mzn/mês</span>
               </div>
               <CardDescription>Ideal para pequenos negócios</CardDescription>
             </CardHeader>
@@ -58,8 +58,8 @@ export function PricingSection() {
               </div>
               <CardTitle className="text-xl">Profissional</CardTitle>
               <div className="flex items-baseline gap-1">
-                <span className="text-3xl font-bold">R$199</span>
-                <span className="text-muted-foreground">/mês</span>
+                <span className="text-3xl font-bold">1999</span>
+                <span className="text-muted-foreground">Mzn/mês</span>
               </div>
               <CardDescription>Perfeito para empresas em crescimento</CardDescription>
             </CardHeader>
@@ -95,8 +95,8 @@ export function PricingSection() {
             <CardHeader>
               <CardTitle className="text-xl">Empresarial</CardTitle>
               <div className="flex items-baseline gap-1">
-                <span className="text-3xl font-bold">R$399</span>
-                <span className="text-muted-foreground">/mês</span>
+                <span className="text-3xl font-bold">7399</span>
+                <span className="text-muted-foreground">Mzn/mês</span>
               </div>
               <CardDescription>Para médias e grandes empresas</CardDescription>
             </CardHeader>

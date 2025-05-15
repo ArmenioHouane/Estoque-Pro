@@ -5,11 +5,11 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 export function LandingHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0  z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 font-semibold">
-          <Package className="h-6 w-6 text-primary" />
-          <span>InventárioFácil</span>
+          <Package className="h-6 w-6 ml-6 text-primary" />
+          <span>Estoque Pro</span>
         </div>
         <nav className="hidden md:flex items-center gap-6">
           <Link href="#features" className="text-sm font-medium hover:text-primary">

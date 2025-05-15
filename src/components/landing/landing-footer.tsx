@@ -8,7 +8,7 @@ export function LandingFooter() {
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 font-semibold">
             <Package className="h-6 w-6 text-primary" />
-            <span>InventárioFácil</span>
+            <span>Estoque Pro</span>
           </div>
           <p className="text-sm text-muted-foreground">
             Solução completa para gestão de inventário para pequenas e médias empresas.
@@ -87,7 +87,7 @@ export function LandingFooter() {
       </div>
       <div className="container mt-8 border-t pt-8 px-4 md:px-6">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm  text-muted-foreground">© 2025 InventárioFácil. Todos os direitos reservados.</p>
+          <p className="text-sm  text-muted-foreground">© 2025 Estoque Pro. Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <Link href="#" className="text-muted-foreground hover:text-primary">
               <svg

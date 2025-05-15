@@ -9,7 +9,7 @@ export function FaqSection() {
             <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">FAQ</div>
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Perguntas Frequentes</h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              Respostas para as dúvidas mais comuns sobre o InventárioFácil.
+              Respostas para as dúvidas mais comuns sobre o Estoque Pro.
             </p>
           </div>
         </div>
@@ -18,7 +18,7 @@ export function FaqSection() {
             <AccordionItem value="item-1">
               <AccordionTrigger>Quanto tempo leva para implementar o sistema?</AccordionTrigger>
               <AccordionContent>
-                A implementação básica do InventárioFácil pode ser feita em apenas um dia. Para empresas com grandes
+                A implementação básica do Estoque Pro pode ser feita em apenas um dia. Para empresas com grandes
                 volumes de dados ou necessidades específicas, o processo completo pode levar até uma semana, incluindo
                 importação de dados, configurações personalizadas e treinamento da equipe.
               </AccordionContent>
@@ -26,7 +26,7 @@ export function FaqSection() {
             <AccordionItem value="item-2">
               <AccordionTrigger>Posso importar meus dados de outro sistema?</AccordionTrigger>
               <AccordionContent>
-                Sim! O InventárioFácil permite importar dados de planilhas Excel, CSV e de vários outros sistemas de
+                Sim! O Estoque Pro permite importar dados de planilhas Excel, CSV e de vários outros sistemas de
                 gestão. Nossa equipe de suporte pode ajudar no processo de migração para garantir que todos os seus
                 dados sejam transferidos corretamente.
               </AccordionContent>
@@ -34,7 +34,7 @@ export function FaqSection() {
             <AccordionItem value="item-3">
               <AccordionTrigger>O sistema funciona em dispositivos móveis?</AccordionTrigger>
               <AccordionContent>
-                Absolutamente. O InventárioFácil é totalmente responsivo e funciona em qualquer dispositivo com acesso à
+                Absolutamente. O Estoque Pro é totalmente responsivo e funciona em qualquer dispositivo com acesso à
                 internet. Além disso, oferecemos aplicativos nativos para iOS e Android que permitem gerenciar seu
                 inventário mesmo offline, com sincronização automática quando a conexão for restabelecida.
               </AccordionContent>
@@ -59,7 +59,7 @@ export function FaqSection() {
             <AccordionItem value="item-6">
               <AccordionTrigger>O sistema pode ser integrado com outras ferramentas?</AccordionTrigger>
               <AccordionContent>
-                Sim, o InventárioFácil oferece integrações nativas com diversos sistemas populares de e-commerce,
+                Sim, o Estoque Pro oferece integrações nativas com diversos sistemas populares de e-commerce,
                 contabilidade e ERP. Além disso, disponibilizamos uma API completa nos planos Profissional e
                 Empresarial, permitindo desenvolver integrações personalizadas com qualquer sistema.
               </AccordionContent>
