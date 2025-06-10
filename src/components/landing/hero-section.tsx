@@ -32,7 +32,7 @@ export function HeroSection() {
           <div className="mt-8 w-full max-w-3xl overflow-hidden rounded-lg border shadow-xl">
           <Image
             src="/hero.jpg"
-            alt="Dashboard do sistema"
+            alt="Dashboard"
             width={1200}
             height={600}
                className="w-full object-cover"

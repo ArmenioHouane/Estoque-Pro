@@ -56,7 +56,7 @@ export function LoginForm() {
 
   return (
     <div className="grid gap-6">
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} >
         <div className="grid gap-4">
           <div className="grid gap-2">
             <Label htmlFor="email">E-mail</Label>

@@ -15,7 +15,22 @@ export default function SignupPage() {
         <Package className="h-6 w-6" />
         <span className="font-bold">InventárioFácil</span>
       </Link>
-      <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+      <div className="
+    mx-auto 
+    
+    flex w-full max-w-[95%] sm:max-w-[350px]
+    flex-col justify-center 
+    space-y-6 
+    rounded-2xl 
+    p-6 
+    
+    shadow-md
+    focus-within:ring-2 
+    focus-within:ring-blue-400 
+    focus-within:shadow-[0_0_15px_#3b82f6]
+    transition-all
+    touch-manipulation
+  ">
         <div className="flex flex-col space-y-2 text-center">
           <h1 className="text-2xl font-semibold tracking-tight">Crie sua conta</h1>
           <p className="text-sm text-muted-foreground">Preencha os dados abaixo para criar sua conta</p>

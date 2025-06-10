@@ -1,69 +1,42 @@
-import { Button } from "@/components/ui/button"
+//components/low-stock-alert.tsx
+import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 
-export function LowStockAlert() {
+interface LowStockAlertProps {
+  products: {
+    _id: string
+    name: string
+    currentStock: number
+    minStock: number
+  }[]
+}
+
+export function LowStockAlert({ products }: LowStockAlertProps) {
   return (
-    <div className="space-y-6">
-      <div className="space-y-2">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium">Teclado Mecânico Logitech</p>
-            <p className="text-xs text-muted-foreground">3 unidades restantes</p>
-          </div>
-          <Button variant="outline" size="sm">
-            Repor
-          </Button>
-        </div>
-        <Progress value={15} className="h-2" />
-      </div>
-      <div className="space-y-2">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium">Headset Gamer HyperX</p>
-            <p className="text-xs text-muted-foreground">4 unidades restantes</p>
-          </div>
-          <Button variant="outline" size="sm">
-            Repor
-          </Button>
-        </div>
-        <Progress value={20} className="h-2" />
-      </div>
-      <div className="space-y-2">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium">Webcam Logitech C920</p>
-            <p className="text-xs text-muted-foreground">2 unidades restantes</p>
-          </div>
-          <Button variant="outline" size="sm">
-            Repor
-          </Button>
-        </div>
-        <Progress value={10} className="h-2" />
-      </div>
-      <div className="space-y-2">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium">Cadeira Gamer ThunderX</p>
-            <p className="text-xs text-muted-foreground">0 unidades restantes</p>
-          </div>
-          <Button variant="outline" size="sm">
-            Repor
-          </Button>
-        </div>
-        <Progress value={0} className="h-2" />
-      </div>
-      <div className="space-y-2">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium">Mousepad XL Gaming</p>
-            <p className="text-xs text-muted-foreground">5 unidades restantes</p>
-          </div>
-          <Button variant="outline" size="sm">
-            Repor
-          </Button>
-        </div>
-        <Progress value={25} className="h-2" />
-      </div>
+    <div className="space-y-4">
+      {products.length === 0 ? (
+        <p className="text-sm text-muted-foreground">Não há produtos com estoque baixo.</p>
+      ) : (
+        products.map((product) => {
+          const percentage = Math.min(Math.round((product.currentStock / product.minStock) * 100), 100)
+
+          return (
+            <Card key={product._id} className="border-none shadow-none">
+              <CardContent className="p-0">
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">{product.name}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {product.currentStock} / {product.minStock}
+                    </span>
+                  </div>
+                  <Progress value={percentage} className="h-2" />
+                </div>
+              </CardContent>
+            </Card>
+          )
+        })
+      )}
     </div>
   )
 }

@@ -1,0 +1,208 @@
+[
+  {
+    "_id": "60d21b4667d0d8992e610c85",
+    "movementId": "MOV001",
+    "type": "Entrada",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c81",
+      "name": "Computador Portátil Dell Inspiron"
+    },
+    "quantity": 10,
+    "previousStock": 5,
+    "newStock": 15,
+    "reason": "Compra",
+    "reference": "Factura 001/2023",
+    "supplier": "60d21b4667d0d8992e610c90",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c95",
+      "name": "João Mabunda"
+    },
+    "notes": "Reabastecimento regular",
+    "date": "2023-05-15T10:30:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c86",
+    "movementId": "MOV002",
+    "type": "Saída",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c82",
+      "name": "Monitor LG 24\""
+    },
+    "quantity": 3,
+    "previousStock": 12,
+    "newStock": 9,
+    "reason": "Venda",
+    "reference": "Pedido nº 345",
+    "order": "60d21b4667d0d8992e610c91",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c96",
+      "name": "Maria Nhantumbo"
+    },
+    "notes": "Venda para empresa local",
+    "date": "2023-05-16T14:45:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c87",
+    "movementId": "MOV003",
+    "type": "Entrada",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c83",
+      "name": "Teclado Mecânico Logitech"
+    },
+    "quantity": 15,
+    "previousStock": 8,
+    "newStock": 23,
+    "reason": "Compra",
+    "reference": "Factura 002/2023",
+    "supplier": "60d21b4667d0d8992e610c92",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c95",
+      "name": "João Mabunda"
+    },
+    "notes": "Reposição após aumento de procura",
+    "date": "2023-05-17T09:15:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c88",
+    "movementId": "MOV004",
+    "type": "Saída",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c84",
+      "name": "Rato Sem Fios Microsoft"
+    },
+    "quantity": 5,
+    "previousStock": 20,
+    "newStock": 15,
+    "reason": "Venda",
+    "reference": "Pedido nº 346",
+    "order": "60d21b4667d0d8992e610c93",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c97",
+      "name": "Carlos Chivambo"
+    },
+    "notes": "Venda via plataforma online",
+    "date": "2023-05-18T16:20:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c89",
+    "movementId": "MOV005",
+    "type": "Ajuste",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c81",
+      "name": "Computador Portátil Dell Inspiron"
+    },
+    "quantity": -2,
+    "previousStock": 15,
+    "newStock": 13,
+    "reason": "Ajuste de Inventário",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c98",
+      "name": "Ana Matola"
+    },
+    "notes": "Correcção após inventário físico",
+    "date": "2023-05-19T11:00:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c8a",
+    "movementId": "MOV006",
+    "type": "Entrada",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c82",
+      "name": "Monitor LG 24\""
+    },
+    "quantity": 8,
+    "previousStock": 9,
+    "newStock": 17,
+    "reason": "Compra",
+    "reference": "Factura 003/2023",
+    "supplier": "60d21b4667d0d8992e610c90",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c95",
+      "name": "João Mabunda"
+    },
+    "notes": "Aquisição para atender pedidos futuros",
+    "date": "2023-05-20T13:30:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c8b",
+    "movementId": "MOV007",
+    "type": "Saída",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c83",
+      "name": "Teclado Mecânico Logitech"
+    },
+    "quantity": 4,
+    "previousStock": 23,
+    "newStock": 19,
+    "reason": "Venda",
+    "reference": "Pedido nº 347",
+    "order": "60d21b4667d0d8992e610c94",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c96",
+      "name": "Maria Nhantumbo"
+    },
+    "notes": "Venda a cliente individual",
+    "date": "2023-05-21T15:45:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c8c",
+    "movementId": "MOV008",
+    "type": "Saída",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c84",
+      "name": "Rato Sem Fios Microsoft"
+    },
+    "quantity": 3,
+    "previousStock": 15,
+    "newStock": 12,
+    "reason": "Perda",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c97",
+      "name": "Carlos Chivambo"
+    },
+    "notes": "Produtos danificados durante transporte Maputo–Matola",
+    "date": "2023-05-22T10:15:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c8d",
+    "movementId": "MOV009",
+    "type": "Entrada",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c81",
+      "name": "Computador Portátil Dell Inspiron"
+    },
+    "quantity": 5,
+    "previousStock": 13,
+    "newStock": 18,
+    "reason": "Compra",
+    "reference": "Factura 004/2023",
+    "supplier": "60d21b4667d0d8992e610c92",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c98",
+      "name": "Ana Matola"
+    },
+    "notes": "Reposição estratégica para o armazém central",
+    "date": "2023-05-23T09:00:00.000Z"
+  },
+  {
+    "_id": "60d21b4667d0d8992e610c8e",
+    "movementId": "MOV010",
+    "type": "Saída",
+    "product": {
+      "_id": "60d21b4667d0d8992e610c82",
+      "name": "Monitor LG 24\""
+    },
+    "quantity": 2,
+    "previousStock": 17,
+    "newStock": 15,
+    "reason": "Venda",
+    "reference": "Pedido nº 348",
+    "order": "60d21b4667d0d8992e610c91",
+    "responsibleUser": {
+      "_id": "60d21b4667d0d8992e610c95",
+      "name": "João Mabunda"
+    },
+    "notes": "Cliente frequente (empresa na Baixa)",
+    "date": "2023-05-24T14:30:00.000Z"
+  }
+]

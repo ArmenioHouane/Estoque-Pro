@@ -1,86 +1,82 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
+//components/recent-activity.tsx
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
-export function RecentActivity() {
+interface RecentActivityProps {
+  activities: {
+    _id: string
+    type: string
+    product: {
+      _id: string
+      name: string
+    }
+    quantity: number
+    date: string
+    responsibleUser?: {
+      _id: string
+      name: string
+    }
+  }[]
+}
+
+export function RecentActivity({ activities }: RecentActivityProps) {
   return (
     <div className="space-y-8">
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/placeholder.svg" alt="Avatar" />
-          <AvatarFallback>JS</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">João Silva adicionou 5 unidades de Notebook Dell Inspiron</p>
-          <p className="text-sm text-muted-foreground">Hoje às 09:15</p>
-        </div>
-        <div className="ml-auto">
-          <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-            Entrada
-          </Badge>
-        </div>
-      </div>
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/placeholder.svg" alt="Avatar" />
-          <AvatarFallback>MO</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">Maria Oliveira removeu 2 unidades de Monitor LG 24&quot;</p>
-          <p className="text-sm text-muted-foreground">Hoje às 08:30</p>
-        </div>
-        <div className="ml-auto">
-          <Badge variant="outline" className="bg-red-50 text-red-700 border-red-200">
-            Saída
-          </Badge>
-        </div>
-      </div>
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/placeholder.svg" alt="Avatar" />
-          <AvatarFallback>CS</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">
-            Carlos Santos adicionou 10 unidades de Teclado Mecânico Logitech
-          </p>
-          <p className="text-sm text-muted-foreground">Hoje às 08:15</p>
-        </div>
-        <div className="ml-auto">
-          <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-            Entrada
-          </Badge>
-        </div>
-      </div>
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/placeholder.svg" alt="Avatar" />
-          <AvatarFallback>AP</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">Ana Pereira removeu 3 unidades de Mouse Sem Fio Microsoft</p>
-          <p className="text-sm text-muted-foreground">Ontem às 16:45</p>
-        </div>
-        <div className="ml-auto">
-          <Badge variant="outline" className="bg-red-50 text-red-700 border-red-200">
-            Saída
-          </Badge>
-        </div>
-      </div>
-      <div className="flex items-center">
-        <Avatar className="h-9 w-9">
-          <AvatarImage src="/placeholder.svg" alt="Avatar" />
-          <AvatarFallback>PC</AvatarFallback>
-        </Avatar>
-        <div className="ml-4 space-y-1">
-          <p className="text-sm font-medium leading-none">Pedro Costa removeu 1 unidade de Cadeira Gamer ThunderX</p>
-          <p className="text-sm text-muted-foreground">Ontem às 14:20</p>
-        </div>
-        <div className="ml-auto">
-          <Badge variant="outline" className="bg-red-50 text-red-700 border-red-200">
-            Saída
-          </Badge>
-        </div>
-      </div>
+      {activities.length === 0 ? (
+        <p className="text-sm text-muted-foreground">Não há atividades recentes.</p>
+      ) : (
+        activities.map((activity) => {
+          const date = new Date(activity.date)
+          const formattedDate = date.toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          })
+
+         const getActivityDescription = () => {
+  const productName = activity.product?.name || "produto desconhecido"
+
+  switch (activity.type) {
+    case "Entrada":
+      return `adicionou ${activity.quantity} unidades de ${productName} ao estoque`
+    case "Saída":
+      return `removeu ${activity.quantity} unidades de ${productName} do estoque`
+    case "Ajuste":
+      return `ajustou o estoque de ${productName} em ${activity.quantity} unidades`
+    default:
+      return `movimentou ${activity.quantity} unidades de ${productName}`
+  }
+}
+
+
+          const getInitials = (name: string) => {
+            return name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")
+              .toUpperCase()
+              .substring(0, 2)
+          }
+
+          return (
+            <div key={activity._id} className="flex items-start gap-4">
+              <Avatar className="h-10 w-10 border">
+                <AvatarFallback>
+                  {activity.responsibleUser ? getInitials(activity.responsibleUser.name) : "US"}
+                </AvatarFallback>
+              </Avatar>
+              <div className="flex flex-col gap-0.5">
+                <p className="text-sm font-medium leading-none">
+                  {activity.responsibleUser ? activity.responsibleUser.name : "Usuário do Sistema"}
+                </p>
+                <p className="text-sm text-muted-foreground">{getActivityDescription()}</p>
+                <p className="text-xs text-muted-foreground">{formattedDate}</p>
+              </div>
+            </div>
+          )
+        })
+      )}
     </div>
   )
 }
